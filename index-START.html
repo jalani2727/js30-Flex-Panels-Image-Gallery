@@ -26,6 +26,7 @@
     .panels {
       min-height: 100vh;
       overflow: hidden;
+      display: flex;
     }
 
     .panel {
@@ -43,6 +44,13 @@
       font-size: 20px;
       background-size: cover;
       background-position: center;
+
+      display: flex;
+      flex : 1; /* woah */
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
     }
 
     .panel1 { background-image:url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500); }
@@ -56,7 +64,20 @@
       margin: 0;
       width: 100%;
       transition: transform 0.5s;
+      
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1 0 auto;
+
     }
+
+    .panel > *:first-child {transform: translateY(-100%)}
+    .panel.open-active > *:first-child {transform: translateY(0)}
+    .panel > *:last-child {transform: translateY(100%)}
+    .panel.open-active > *:last-child {transform: translateY(0)}
+    
 
     .panel p {
       text-transform: uppercase;
@@ -78,29 +99,29 @@
 
   <div class="panels">
     <div class="panel panel1">
-      <p>Hey</p>
-      <p>Let's</p>
-      <p>Dance</p>
+      <p>Eat</p>
+      <p>A</p>
+      <p>Dick</p>
     </div>
     <div class="panel panel2">
-      <p>Give</p>
-      <p>Take</p>
-      <p>Receive</p>
+      <p>Do</p>
+      <p>Your</p>
+      <p>Best</p>
     </div>
     <div class="panel panel3">
-      <p>Experience</p>
-      <p>It</p>
-      <p>Today</p>
+      <p>Nut</p>
+      <p>All In</p>
+      <p>This Pussy</p>
     </div>
     <div class="panel panel4">
-      <p>Give</p>
-      <p>All</p>
-      <p>You can</p>
+      <p>Form</p>
+      <p>The</p>
+      <p>Habit</p>
     </div>
     <div class="panel panel5">
-      <p>Life</p>
-      <p>In</p>
-      <p>Motion</p>
+      <p>Build</p>
+      <p>The </p>
+      <p>Skill</p>
     </div>
   </div>
 
